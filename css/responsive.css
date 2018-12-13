@@ -1,0 +1,48 @@
+@media (max-width: 499px) {
+	#restaurants-list li {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 950px) {
+
+	nav h1 a {
+		font-size: 1.25em;
+	}
+
+	.restaurant-list-container {
+		align-items: center;
+	}
+
+	#restaurants-list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	#restaurants-list li {
+		width: 40%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+@media (min-width: 951px) {
+
+	nav h1 a {
+		font-size: 1.75em;
+		letter-spacing: .45em;
+	}
+
+	#restaurants-list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	#restaurants-list li {
+		width: 25%;
+		margin-top: 10px;
+		margin-bottom: 10px
+	}
+
+}

@@ -1,0 +1,43 @@
+@media (max-width: 550px) {
+	.inside #map-container {
+		background: blue none repeat scroll 0 0;
+		height: 400px;
+		width: 100%;
+		margin: auto;
+		overflow: hidden;
+		position: relative;
+	}
+
+	#restaurant-container, #reviews-container {
+		width: 100%;
+		padding: 0;
+	}
+
+	#restaurant-img, #restaurant-cuisine {
+		width: 100%;
+	}
+
+
+}
+
+@media (min-width: 600px) and (max-width: 850px) {
+
+	#restaurant-hours {
+		width: 85%;
+	}
+
+	#reviews-list li {
+		width: 70%;
+	}
+
+	#restaurant-img, #restaurant-cuisine {
+		width: 85%;
+	}
+
+}
+
+@media (min-width: 850px) {
+	#reviews-list li {
+		width: 70%;
+	}
+}
