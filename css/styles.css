@@ -2,21 +2,26 @@
 /* CSS Document */
 
 body,td,th,p{
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Work Sans', sans-serif;
 	font-size: 10pt;
 	color: #333;
 	line-height: 1.5;
+
 }
 body {
 	background-color: #fdfdfd;
 	margin: 0;
-	position:relative;
+  overflow-x: hidden;
+	/*position:relative;
+  width: 100%;*/
 }
+
 ul, li {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Work Sans', sans-serif;;
 	font-size: 10pt;
 	color: #333;
 }
+
 a {
 	color: orange;
 	text-decoration: none;
@@ -29,16 +34,20 @@ a img{
 	border: none 0px #fff;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Work Sans', sans-serif;;
   margin: 0 0 20px;
 }
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+
 }
-#maincontent {
+
+
+/*#maincontent {
   background-color: #f3f3f3;
-  min-height: 100%;
-}
+  width: 100%;
+  display: flex;
+
+}*/
 #footer {
   background-color: #444;
   color: #aaa;
@@ -48,7 +57,29 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
 }
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+
 /* ====================== Navigation ====================== */
+
+.title-wrapper {
+  margin: auto;
+  width: 100%;
+}
+
+.main-title {
+  width: 100%;
+  top: 0;
+  margin: auto;
+  order: -1;
+}
+
 nav {
   width: 100%;
   height: 80px;
@@ -71,7 +102,6 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
 }
 
 /* Display list items side by side */
@@ -98,17 +128,32 @@ nav h1 a {
     text-decoration: underline;
 }
 /* ====================== Map ====================== */
-#map {
+
+#map-container {
   height: 400px;
   width: 100%;
-  background-color: #ccc;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+
+
+
 }
+
+#map {
+  height: 100%;
+  width: 100%;
+  background-color: #ccc;
+  position: absolute;
+}
+
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  height: 50px;
   background-color: #3397DB;
   align-items: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 .filter-options h2 {
   color: white;
@@ -133,19 +178,21 @@ nav h1 a {
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
-  margin: 0;
-  padding: 30px 15px 60px;
+  margin: auto;
+  padding: 0;
   text-align: center;
+  width: 100%;
+
 }
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 15px;
-  min-height: 380px;
+  margin: auto;
+  /*min-height: 380px*/;
   padding: 0 30px 25px;
   text-align: left;
-  width: 270px;
+  /*flex-wrap: wrap;*/
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -165,8 +212,20 @@ nav h1 a {
   margin: 20px 0 10px;
   text-transform: uppercase;
 }
+
+/*container for restaurant list*/
+/*.restaurant-container {
+  margin: auto;
+  width: 100%;
+}
+
+.restaurant-list-container {
+  width: 100%;
+  flex-wrap: wrap;
+}*/
+
 #restaurants-list p {
-  margin: 0;
+  margin: auto;
   font-size: 11pt;
 }
 #restaurants-list li a {
@@ -183,6 +242,11 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Details ====================== */
+.inside .maincontent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .inside header {
   position: fixed;
   top: 0;
@@ -204,12 +268,11 @@ nav h1 a {
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
-  width: 50%;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
-  font-family: Arial,sans-serif;
+  font-family: 'Work Sans', sans-serif;;
   font-size: 20pt;
   font-weight: 200;
   letter-spacing: 0;
@@ -264,7 +327,6 @@ nav h1 a {
   margin: 0 0 30px;
   overflow: hidden;
   padding: 0 20px 20px;
-  position: relative;
   width: 85%;
 }
 #reviews-list li p {
