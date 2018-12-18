@@ -70,6 +70,14 @@
   <!-- Google Maps -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUivR8fOwSpWo2DQ9wfJlk2VXLsAa04-M
 &libraries=places&callback=initMap"></script>
+  <!-- Service Worker Script -->
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+               .register('/sw.js')
+               .then(function() { console.log("Service Worker Registered"); });
+    }
+  </script>
   <!-- End scripts -->
 
 </body>

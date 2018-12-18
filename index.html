@@ -42,6 +42,13 @@
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUivR8fOwSpWo2DQ9wfJlk2VXLsAa04-M
 &libraries=places&callback=initMap"></script>
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+               .register('/sw.js')
+               .then(function() { console.log("Service Worker Registered"); });
+    }
+  </script>
 
 
   <footer id="footer">

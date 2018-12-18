@@ -17,6 +17,10 @@
 		width: 100%;
 	}
 
+	#breadcrumb {
+		width: 100%;
+	}
+
 
 }
 
@@ -32,6 +36,14 @@
 
 	#restaurant-img, #restaurant-cuisine {
 		width: 85%;
+	}
+
+	#breadcrumb {
+		width: calc(50% - 80px);
+	}
+
+	.inside #map-container {
+		bottom: 8%;
 	}
 
 }
