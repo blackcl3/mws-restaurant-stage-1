@@ -10,9 +10,9 @@ self.addEventListener('install', function(event){
 				'js/main.js',
 				'js/restaurant_info.js',
 				'index.html',
-				'/index.html?homescreen=1'
-				'restaurant.html',
-				'/restaurant.html?homescreen=1'
+				'/index.html?homescreen=1',
+				'/restaurant.html',
+				'/restaurant.html?homescreen=1',
 				'img'
 
 			]);
