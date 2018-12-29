@@ -12,7 +12,7 @@ self.addEventListener('install', function(event){
 				'index.html',
 				'/index.html?homescreen=1',
 				'/restaurant.html',
-				'/restaurant.html?homescreen=1',
+				'/restaurant.html?=1',
 				'img'
 
 			]);
